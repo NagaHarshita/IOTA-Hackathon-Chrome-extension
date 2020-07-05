@@ -2,7 +2,7 @@
 var urlList=[];
 
 document.addEventListener('DOMContentLoaded', function() {
-    chrome.tabs.query({currentWindow: true,active: true}, function(tabs) {
+    chrome.tabs.query({lastFocusedWindow: true,active: true}, function(tabs) {
         // tabs is an array so fetch the first (and only) object-element in tab 
         var currentTab = tabs[0];
         var url = currentTab.url;
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // fetch the URL of the current tab, add inside the window
 function addLink() {
-    chrome.tabs.query({currentWindow: true,active: true}, function(tabs) {
+    chrome.tabs.query({lastFocusedWindow: true,active: true}, function(tabs) {
         // tabs is an array so fetch the first (and only) object-element in tab 
         var currentTab = tabs[0];
         var url = currentTab.url;
@@ -87,6 +87,7 @@ function addUrlToDom(obj){
     var deleteButton = document.createElement('button') ;
 
     newDiv.setAttribute('id',obj.url);
+    newDiv.setAttribute('class', 'col-*-*');
 
     newLink.textContent = obj.company + " " + obj.role;
     newLink.setAttribute('href',obj.url);
