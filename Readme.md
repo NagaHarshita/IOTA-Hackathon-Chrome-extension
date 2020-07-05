@@ -20,6 +20,51 @@ Chrome extensions make our life so easy by there minimal actions. Being a studen
 - manifest.json
 - Javascript and HTML files for popup
 
+## Explaining manifest.json file
+
+These are the basic version kind of things that manifest.json should have.
+
+$plugin[{
+    "type": "code-block",
+    "data": {
+        "languageBlocks": [
+            {
+                "code": "\"manifest_version\" : 2,\n\"name\" : \"IOTA Hackathon\",\n\"version\" : \"0.001\",",
+                "language": "json"
+            }
+        ]
+    }
+}]$
+
+We do need browser action, which is responsible for the popup when we click on the extension. 
+
+$plugin[{
+    "type": "code-block",
+    "data": {
+        "languageBlocks": [
+            {
+                "code": "\"browser_action\":{\n  \t\t\t\/\/ this is the icon that you see on extension\n       \"default_icon\" : \"tictactoe.png\", \n  \t\t\t\/\/ this is the popup webpage code\n       \"default_popup\" : \"Form\/index.html\",\n       \"default_title\" : \"IOTA\"\n },",
+                "language": "json"
+            }
+        ]
+    }
+}]$
+
+Permissions are necessary for get the current tab link from the user and storing the bookmarked things to the DOM.  
+
+$plugin[{
+    "type": "code-block",
+    "data": {
+        "languageBlocks": [
+            {
+                "code": "\"permissions\" : [\n     \"tabs\", \/\/ for getting info about tabs\n     \"storage\"\/\/ for storage in local DOM\n]",
+                "language": "json"
+            }
+        ]
+    }
+}]$
+
+
 
 ## API's used
 
