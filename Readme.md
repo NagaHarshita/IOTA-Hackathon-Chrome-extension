@@ -24,7 +24,7 @@ Chrome extensions make our life so easy by there minimal actions. Being a studen
 
 These are the basic version kind of things that manifest.json should have.
 
-````
+```
     manifest_version" : 2,
     "name" : "IOTA Hackathon",
     "version" : "0.001",
