@@ -24,45 +24,31 @@ Chrome extensions make our life so easy by there minimal actions. Being a studen
 
 These are the basic version kind of things that manifest.json should have.
 
-$plugin[{
-    "type": "code-block",
-    "data": {
-        "languageBlocks": [
-            {
-                "code": "\"manifest_version\" : 2,\n\"name\" : \"IOTA Hackathon\",\n\"version\" : \"0.001\",",
-                "language": "json"
-            }
-        ]
-    }
-}]$
-
+````
+    manifest_version" : 2,
+    "name" : "IOTA Hackathon",
+    "version" : "0.001",
+```
 We do need browser action, which is responsible for the popup when we click on the extension. 
 
-$plugin[{
-    "type": "code-block",
-    "data": {
-        "languageBlocks": [
-            {
-                "code": "\"browser_action\":{\n  \t\t\t\/\/ this is the icon that you see on extension\n       \"default_icon\" : \"tictactoe.png\", \n  \t\t\t\/\/ this is the popup webpage code\n       \"default_popup\" : \"Form\/index.html\",\n       \"default_title\" : \"IOTA\"\n },",
-                "language": "json"
-            }
-        ]
-    }
-}]$
+```
+"browser_action":{
+    "default_icon" : "tictactoe.png",
+    "default_popup" : "Form/index.html",
+    "default_title" : "IOTA"
+}
+```
 
-Permissions are necessary for get the current tab link from the user and storing the bookmarked things to the DOM.  
+Permissions are necessary for get the current tab link from the user and storing the bookmarked things to the DOM.
 
-$plugin[{
-    "type": "code-block",
-    "data": {
-        "languageBlocks": [
-            {
-                "code": "\"permissions\" : [\n     \"tabs\", \/\/ for getting info about tabs\n     \"storage\"\/\/ for storage in local DOM\n]",
-                "language": "json"
-            }
-        ]
-    }
-}]$
+```
+"permissions" : [
+    "tabs",
+    "storage"
+]
+```
+
+
 
 
 
